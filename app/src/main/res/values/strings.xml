@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Тестовое задание</string>
+    <string name="btn_request_code">Запросить смс</string>
+    <string name="hint_phone">Телефон</string>
+    <string name="hint_code">Код</string>
+    <string name="title_error">Ошибка</string>
+    <string name="btn_ok">Ок</string>
+    <string name="phone_number_not_correct">Телефон введён не корректно</string>
+    <string name="code_not_correct">Введён неверный код</string>
+    <string name="title_authorization">Авторизация</string>
+    <string name="title_request_code">Повторно код можно будет запросить через %1$s сек.</string>
+    <string name="title_delete">Удалить</string>
+    <string name="title_warning">Предупреждение</string>
+    <string name="btn_delete">Удалить</string>
+    <string name="btn_cancel">Отменить</string>
+    <string name="info_delete_image">Вы действительно хотите удалить эту картинку?</string>
+    <string-array name="imagesUrl">
+
+    </string-array>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/navigation_authorization">
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="ru.homedevelopment.testtask.presentation.main.MainFragment"
+        tools:layout="@layout/fragment_main"/>
+
+    <fragment
+        android:id="@+id/navigation_authorization"
+        android:name="ru.homedevelopment.testtask.presentation.authorization.AuthorizationFragment"
+        android:label="@string/title_authorization"
+        tools:layout="@layout/fragment_authorization"/>
+
+    <fragment
+        android:id="@+id/navigation_image"
+        android:name="ru.homedevelopment.testtask.presentation.image.ImageFragment"
+        android:label=""
+        tools:layout="@layout/fragment_image"/>
+</navigation>
