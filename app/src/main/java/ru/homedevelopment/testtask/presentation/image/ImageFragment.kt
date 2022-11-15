@@ -1,6 +1,7 @@
 package ru.homedevelopment.testtask.presentation.image
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.MenuHost
@@ -8,6 +9,7 @@ import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import coil.load
 import ru.homedevelopment.testtask.R
 import ru.homedevelopment.testtask.databinding.FragmentImageBinding
@@ -74,7 +76,18 @@ class ImageFragment: Fragment() {
                 .setMessage(message)
                 .setPositiveButton(R.string.btn_delete) { _, _ ->
                     viewModel.deleteImageUrl()
-                    requireActivity().onBackPressed()
+                    val timer = object : CountDownTimer(
+                        2000,
+                        2000
+                    ) {
+                        override fun onTick(millisUntilFinished: Long) {}
+
+                        override fun onFinish() {
+                            requireActivity().onBackPressed()
+                            this.cancel()
+                        }
+                    }
+                    timer.start()
                 }
                 .setNegativeButton(R.string.btn_cancel) { _, _ ->}
                 .show()
